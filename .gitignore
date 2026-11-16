@@ -1,0 +1,20 @@
+# Credentials and site-specific settings, under any name or folder.
+# The template door-keypad/secrets.example.h stays tracked.
+secrets*.h
+!secrets.example.h
+
+# Build output and firmware images: they embed the values from secrets.h
+# (arduino-cli also writes door-keypad/build/<fqbn>/; a flash dump is a .bin too)
+build/
+*.bin
+*.elf
+*.map
+
+# OS and tool clutter
+.DS_Store
+__pycache__/
+*.pyc
+
+# YAPP_Box generator: link or clone (see enclosure/README.md)
+enclosure
+
